@@ -191,6 +191,13 @@
 		{ "type": "Feature", "properties": { "fid": 329, "EV_DATE": 17010316, "EV_TIME": 0.0, "LAT": 50.59, "LON": 12.64, "DEPTH": null, "DEP_COMM": null, "MAG": null, "MAG_TYPE": null, "INTENSITY": 4.0, "INT_SCALE": "MSK", "ISO_DATE": null, "ISO_TIME": "00:00:00.000", "PT_SIZE": 2.888, "EV_TYPE": "ke", "EXPL_DE": "tektonisch", "EXPL_EN": "known earthquake", "SOURCE": "LEY11", "EV_ID": 325 }, "geometry": { "type": "Point", "coordinates": [ 12.64, 50.59 ] } },
 		{ "type": "Feature", "properties": { "fid": 330, "EV_DATE": 17010317, "EV_TIME": 20000.0, "LAT": 50.59, "LON": 12.64, "DEPTH": null, "DEP_COMM": null, "MAG": null, "MAG_TYPE": null, "INTENSITY": 4.0, "INT_SCALE": "MSK", "ISO_DATE": null, "ISO_TIME": "02:00:00.000", "PT_SIZE": 2.888, "EV_TYPE": "ke", "EXPL_DE": "tektonisch", "EXPL_EN": "known earthquake", "SOURCE": "LEY11", "EV_ID": 326 }, "geometry": { "type": "Point", "coordinates": [ 12.64, 50.59 ] } },
 
+	var nexrad = L.tileLayer.wms("http://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi", {
+    layers: 'nexrad-n0r-900913',
+    format: 'image/png',
+    transparent: true,
+    attribution: "Weather data © 2012 IEM Nexrad"
+	});
+		
 </script>
 
 
