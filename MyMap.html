@@ -11,12 +11,6 @@
 
 <body>
 
-
-<!--<div id="mapid" style="width: 600px; height: 400px; position: relative;"></div> -->
-<div id="mapid" style="width: 100%; height: 100%; padding: 0; margin: 0;"></div>
-<script src="gullies.geojson"></script>
-
-
 <h1>Europa im Quadrat</h1>
 <p>Von Lissabon über Stockholm nach Berlin und Rom.</p>
 <p>Und hier kommt die Karte:</p>
@@ -197,6 +191,21 @@
     transparent: true,
     attribution: "Weather data © 2012 IEM Nexrad"
 	});
+	overlay_DTK1000.addTo(mymap)
+
+	// Basemaps added before
+	var basemaps = {
+	"Open Street Map DE": osm_basemap,
+	"Open Topo Map": otm_basemap,
+	"Black & White": OpenMapSurfer_Grayscale_basemap};
+	// Do the same with the Overlay features
+	var overlays = {
+	“Earthquakes in Germany": overlay_eq_points,
+	“Topo Map 1:1 Mio": overlay_DTK1000};
+	// Add them to your Layer Control
+	var legend = L.control.layers(basemaps, overlays, {collapsed:
+	false}).addTo(mymap);
+
 		
 </script>
 
